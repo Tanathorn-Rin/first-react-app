@@ -1,19 +1,39 @@
 import './App.css';
-import LabelInput from "./LabelInput";
-import H1 from "./H1";
+import CustomerComponent from "./CustomerComponent";
+
+
+const customer = {
+    firstName: 'Gregor',
+    lastName: 'Müller',
+    phoneNumberList: [
+        '+49382',
+        '+64'
+    ],
+    email: 'gregor.mueller@gmail.com'
+}
+
+// old way of saying hello
+function sayHello(customer) {
+    console.log('Hello ' + customer.firstName)
+}
+
+// new way of saying hello
+const sayHello2 = ({firstName}) => {
+    console.log('Hello ' + firstName)
+}
+
+
+sayHello2(customer)
 
 
 const App = () => {
     return (
         <div>
-            <H1 content="Hello React Native" title="Hello Title"/>
-            <LabelInput label="firstname" type="text"/>
-            <LabelInput label="lasstname" type="text"/>
-            <LabelInput label="email" type="text"/>
-            <LabelInput label="newsletter" type="checkbox"/>
+            <CustomerComponent customer={customer}/>
         </div>
     )
 }
 
+// <CustomerComponent customer={customer}/> equals to CustomerComponent({customer: customer});
 
 export default App;
