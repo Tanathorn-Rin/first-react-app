@@ -6,14 +6,22 @@ import H1 from "./H1";
 
 
 const CustomerComponent = ({customer}) => {
-    const {firstName, lastName, email} = customer
+    const {firstName, lastName, email, phoneNumberList} = customer
     return (
         <div>
-            <H1 content={firstName + ' ' + lastName}/>
-            <LabelInput label="firstname" type="text" value={firstName}/>
-            <LabelInput label="lasstname" type="text" value={lastName}/>
-            <LabelInput label="email" type="text" value={email}/>
-            <LabelInput label="newsletter" type="checkbox"/>
+            <H1 content={firstName + ' ' + lastName} color="#313131"/>
+            <LabelInput label="First name" type="text" value={firstName}/>
+            <LabelInput label="Lasst name" type="text" value={lastName}/>
+            <LabelInput label="Email" type="text" value={email}/>
+
+            <br/>
+
+            {phoneNumberList.map((phoneNumber, index) => {
+                // first task: transform this list of <span> to <LabelInput>
+                return (
+                    <span key={index}>{phoneNumber}<br/></span>
+                )
+            })}
         </div>
     )
 }

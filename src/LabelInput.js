@@ -1,11 +1,11 @@
-function LabelInput({label, type, value}) {
+const LabelInput = ({label, type, value}) => {
     return (
         <div>
             <div>
-                <label style={{'color' :'#ff0000'}}>{label}</label>
+                <label style={{'color' :'#373737'}}>{label}</label>
             </div>
             <div>
-                <input type={type} value={value} maxLength="20"/>
+                <input type={type} value={value}/>
             </div>
         </div>
     )

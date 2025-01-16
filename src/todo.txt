@@ -1,0 +1,14 @@
+1.) ./H1.js
+
+color="#313131"
+Allow to set the color of the header with a property
+
+<H1 color="#313131" content="hello"/>
+
+2.) Create a component button that renders <button>
+    - add the property label
+    - add a property onClick (Function that is executed when button is clicked
+<Button label="Click me" onClick={() => { console.log('clicked'}}/>
+
+3.) ./CustomerComponent
+turn the list of <span> with the phone number into an input field for every phone number

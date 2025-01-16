@@ -1,6 +1,8 @@
-function H1({content, title}) {
+// todo: Allow to set the color of the header with a property
+
+const H1 = ({content}) => {
     return (
-        <h1 title={title}>{content}</h1>
+        <h1>{content}</h1>
     )
 }
 
